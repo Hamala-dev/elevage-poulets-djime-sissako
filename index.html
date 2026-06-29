@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Élevage et vente de poulets fermiers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-content">
+        <img
+          src="./assets/images/logo.png"
+          alt="Logo de la ferme"
+          class="header-logo"
+        />
+
+        <h1>Élevage de poulets fermiers Chez Djimé Sissako</h1>
+
+        <nav>
+          <a href="#accueil">Accueil</a>
+          <a href="#apropos">À propos</a>
+          <a href="#produits">Nos poulets</a>
+          <a href="#tarifs">Tarifs</a>
+          <a href="#contact">Contact</a>
+          <a href="#commande">Commande</a>
+        </nav>
+      </div>
+    </header>
+
+    <section id="accueil" class="hero animated-banner">
+      <div class="hero-content">
+        <h1 class="fade-in-up">Des poulets fermiers élevés avec soin</h1>
+        <p class="fade-in-up delay-1">
+          Élevage et vente de poulets à [Ta ville] — qualité, traçabilité et
+          circuit court.
+        </p>
+        <a href="#commande" class="btn hero-btn fade-in-up delay-2">
+          Commander maintenant
+        </a>
+      </div>
+    </section>
+
+    <section id="apropos" class="section">
+      <h2>À propos de notre élevage</h2>
+      <img src="./assets/images/poulets-fermiers.png" alt="Poulet fermier" />
+      <p>
+        Nous élevons nos poulets en plein air à [lieu], avec une alimentation à
+        base de [céréales, maïs…]. Notre priorité : une viande de qualité, un
+        élevage respectueux et une relation de confiance avec nos clients.
+      </p>
+    </section>
+
+    <section id="produits" class="section">
+      <h2>Nos poulets et produits</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Poulet fermier prêt à cuire</h3>
+          <img src="./assets/images/poulets.webp" alt="Poulet prêt à cuire" />
+          <p>Poids moyen : 1,5–2 kg</p>
+          <p>Prix : X €/kg</p>
+        </div>
+        <div class="card">
+          <img
+            class="card-img"
+            src="./assets/images/poulets-vivants.jpg"
+            alt="Poulet vivant"
+          />
+          <h3>Poulets vivants</h3>
+          <p>Races : [à préciser]</p>
+          <p>Prix : à partir de X €</p>
+        </div>
+        <div class="card">
+          <img
+            class="card-img"
+            src="./assets/images/oeufs-fermies.jpg"
+            alt="Œufs"
+          />
+          <h3>Autres produits</h3>
+          <p>Œufs, abats… (selon disponibilité)</p>
+        </div>
+      </div>
+    </section>
+    <section id="commande" class="section">
+      <h2>Formulaire de commande</h2>
+
+      <form action="#" method="POST">
+        <input type="text" name="nom" placeholder="Votre nom" required />
+        <input type="tel" name="telephone" placeholder="Téléphone" required />
+
+        <select name="produit" required>
+          <option value="">Choisir un produit</option>
+          <option value="poulet_cuire">Poulet prêt à cuire</option>
+          <option value="poulet_vivant">Poulet vivant</option>
+          <option value="oeufs">Œufs</option>
+        </select>
+
+        <input type="number" name="quantite" placeholder="Quantité" required />
+
+        <textarea
+          name="message"
+          placeholder="Message ou demande spéciale"
+        ></textarea>
+
+        <button type="submit">Envoyer la commande</button>
+      </form>
+    </section>
+    <section class="section tarifs">
+      <h2 class="title-center">Nos Tarifs</h2>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="icon">🐔</div>
+          <h3>Poulet prêt à cuire</h3>
+          <p class="desc">Élevage fermier – Abattage local</p>
+          <p class="price">X €/kg</p>
+        </div>
+
+        <div class="pricing-card">
+          <div class="icon">🐓</div>
+          <h3>Poulet vivant</h3>
+          <p class="desc">Races disponibles selon la saison</p>
+          <p class="price">À partir de X €</p>
+        </div>
+
+        <div class="pricing-card">
+          <div class="icon">🥚</div>
+          <h3>Œufs fermiers</h3>
+          <p class="desc">Plein air – Fraîcheur garantie</p>
+          <p class="price">X € la douzaine</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact">
+      <h2 class="title-center">Nous contacter</h2>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="icon">📞</div>
+          <h3>Téléphone</h3>
+          <p>06 XX XX XX XX</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon">📧</div>
+          <h3>Email</h3>
+          <p>tonmail@example.com</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon">📍</div>
+          <h3>Adresse</h3>
+          <p>[Adresse complète]</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon">💬</div>
+          <h3>WhatsApp</h3>
+          <p>Disponible pour les commandes</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; [Année] Élevage de poulets fermiers Chez Djimé Sissako</p>
+    </footer>
+  </body>
+</html>
