@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap");
+
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   color: #fff;
-
-  /* Dégradé dynamique */
   background: linear-gradient(135deg, #2c3e50, #e67e22);
   background-size: 300% 300%;
   animation: gradientMove 12s ease infinite;
-
-  /* Photo stylisée en overlay */
   position: relative;
   overflow-x: hidden;
 }
@@ -23,12 +19,11 @@ body::before {
   width: 100%;
   height: 100%;
   background: url("./assets/images/Copilot.png") center/cover no-repeat;
-  opacity: 0.35; /* photo en transparence */
+  opacity: 0.35;
   z-index: -2;
   animation: zoomPhoto 25s ease-in-out infinite;
 }
 
-/* Filtre sombre pour lisibilité */
 body::after {
   content: "";
   position: fixed;
@@ -40,7 +35,6 @@ body::after {
   z-index: -1;
 }
 
-/* Animation du dégradé */
 @keyframes gradientMove {
   0% {
     background-position: 0% 50%;
@@ -53,7 +47,6 @@ body::after {
   }
 }
 
-/* Zoom lent sur la photo */
 @keyframes zoomPhoto {
   0% {
     transform: scale(1);
@@ -65,21 +58,7 @@ body::after {
     transform: scale(1);
   }
 }
-@media (max-width: 600px) {
-  body {
-    animation: none; /* désactive l’animation sur mobile */
-    background-size: cover;
-  }
 
-  body::before {
-    opacity: 0.45;
-    animation: none;
-  }
-
-  .hero {
-    padding: 100px 15px;
-  }
-}
 /* --- HEADER STICKY --- */
 .main-header {
   position: sticky;
@@ -88,16 +67,12 @@ body::after {
   padding: 20px 0;
   text-align: center;
   color: #fff;
-
-  /* Dégradé dynamique */
   background: linear-gradient(135deg, #2c3e50, #e67e22);
   background-size: 300% 300%;
   animation: gradientMove 12s ease infinite;
-
   overflow: hidden;
 }
 
-/* Photo stylisée en overlay */
 .main-header::before {
   content: "";
   position: absolute;
@@ -111,7 +86,6 @@ body::after {
   animation: zoomPhoto 25s ease-in-out infinite;
 }
 
-/* Filtre sombre */
 .main-header::after {
   content: "";
   position: absolute;
@@ -123,20 +97,17 @@ body::after {
   z-index: -1;
 }
 
-/* --- LOGO --- */
 .header-logo {
   height: 70px;
   margin-bottom: 10px;
 }
 
-/* --- TEXTE --- */
 .main-header h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 26px;
   margin-bottom: 15px;
 }
 
-/* --- NAVIGATION --- */
 nav a {
   color: #fff;
   margin: 0 12px;
@@ -149,37 +120,7 @@ nav a:hover {
   color: #e67e22;
 }
 
-/* --- ANIMATIONS --- */
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes zoomPhoto {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-footer {
-  background: #234;
-  color: #fff;
-  padding: 15px;
-  text-align: center;
-}
+/* --- HERO --- */
 .hero {
   padding: 100px 20px;
   text-align: center;
@@ -187,7 +128,6 @@ footer {
   position: relative;
 }
 
-/* Filtre supplémentaire pour la bannière */
 .hero::before {
   content: "";
   position: absolute;
@@ -195,7 +135,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: transparent; /* Vous pouvez ajuster la couleur si nécessaire */
+  background: transparent;
   z-index: 1;
 }
 
@@ -210,12 +150,6 @@ header img {
   height: 60px;
 }
 
-nav a {
-  color: #fff;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
 .title-center {
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -223,6 +157,17 @@ nav a {
   margin-bottom: 30px;
 }
 
+.section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  color: #fff;
+}
+
+/* --- PRICING CARDS --- */
 .pricing-grid {
   display: flex;
   gap: 25px;
@@ -260,6 +205,8 @@ nav a {
   color: #666;
   font-size: 14px;
 }
+
+/* --- CONTACT CARDS --- */
 .contact-grid {
   display: flex;
   flex-wrap: wrap;
@@ -286,26 +233,19 @@ nav a {
   margin-bottom: 10px;
 }
 
-.section {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-h2 {
-  color: #fff;
-}
-
+/* --- GRID & CARDS --- */
 .grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
+
 img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
+
 .card-img {
   width: 100%;
   height: auto;
@@ -320,6 +260,7 @@ img {
   flex: 1 1 280px;
 }
 
+/* --- FOOTER --- */
 footer {
   background: #2c3e50;
   color: #fff;
@@ -328,6 +269,7 @@ footer {
   margin-top: 40px;
 }
 
+/* --- FORMS --- */
 form input,
 form select,
 form textarea {
@@ -352,6 +294,20 @@ form button,
 
 /* 📱 Smartphones */
 @media (max-width: 600px) {
+  body {
+    animation: none;
+    background-size: cover;
+  }
+
+  body::before {
+    opacity: 0.45;
+    animation: none;
+  }
+
+  .hero {
+    padding: 100px 15px;
+  }
+
   header {
     flex-direction: column;
     text-align: center;
@@ -402,408 +358,3 @@ form button,
     flex: 1 1 45%;
   }
 }
-=======
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap");
-body {
-  margin: 0;
-  font-family: "Open Sans", sans-serif;
-  color: #fff;
-
-  /* Dégradé dynamique */
-  background: linear-gradient(135deg, #2c3e50, #e67e22);
-  background-size: 300% 300%;
-  animation: gradientMove 12s ease infinite;
-
-  /* Photo stylisée en overlay */
-  position: relative;
-  overflow-x: hidden;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("./assets/images/Copilot.png") center/cover no-repeat;
-  opacity: 0.35; /* photo en transparence */
-  z-index: -2;
-  animation: zoomPhoto 25s ease-in-out infinite;
-}
-
-/* Filtre sombre pour lisibilité */
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: -1;
-}
-
-/* Animation du dégradé */
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Zoom lent sur la photo */
-@keyframes zoomPhoto {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@media (max-width: 600px) {
-  body {
-    animation: none; /* désactive l’animation sur mobile */
-    background-size: cover;
-  }
-
-  body::before {
-    opacity: 0.45;
-    animation: none;
-  }
-
-  .hero {
-    padding: 100px 15px;
-  }
-}
-/* --- HEADER STICKY --- */
-.main-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  padding: 20px 0;
-  text-align: center;
-  color: #fff;
-
-  /* Dégradé dynamique */
-  background: linear-gradient(135deg, #2c3e50, #e67e22);
-  background-size: 300% 300%;
-  animation: gradientMove 12s ease infinite;
-
-  overflow: hidden;
-}
-
-/* Photo stylisée en overlay */
-.main-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("./assets/images/elevage.png") center/cover no-repeat;
-  opacity: 0.35;
-  z-index: -2;
-  animation: zoomPhoto 25s ease-in-out infinite;
-}
-
-/* Filtre sombre */
-.main-header::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: -1;
-}
-
-/* --- LOGO --- */
-.header-logo {
-  height: 70px;
-  margin-bottom: 10px;
-}
-
-/* --- TEXTE --- */
-.main-header h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 26px;
-  margin-bottom: 15px;
-}
-
-/* --- NAVIGATION --- */
-nav a {
-  color: #fff;
-  margin: 0 12px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s ease;
-}
-
-nav a:hover {
-  color: #e67e22;
-}
-
-/* --- ANIMATIONS --- */
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes zoomPhoto {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-footer {
-  background: #234;
-  color: #fff;
-  padding: 15px;
-  text-align: center;
-}
-.hero {
-  padding: 100px 20px;
-  text-align: center;
-  color: #fff;
-  position: relative;
-}
-
-/* Filtre supplémentaire pour la bannière */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent; /* Vous pouvez ajuster la couleur si nécessaire */
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-  margin: auto;
-}
-
-header img {
-  height: 60px;
-}
-
-nav a {
-  color: #fff;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-.title-center {
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 32px;
-  margin-bottom: 30px;
-}
-
-.pricing-grid {
-  display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.pricing-card {
-  background: #2c3e508c;
-  padding: 25px;
-  border-radius: 12px;
-  width: 280px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.pricing-card:hover {
-  transform: translateY(-8px);
-}
-
-.icon {
-  font-size: 45px;
-  margin-bottom: 10px;
-}
-
-.price {
-  font-size: 24px;
-  font-weight: bold;
-  color: #e67e22;
-  margin-top: 10px;
-}
-
-.desc {
-  color: #666;
-  font-size: 14px;
-}
-.contact-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  justify-content: center;
-}
-
-.contact-card {
-  background: #2c3e508c;
-  padding: 25px;
-  width: 260px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.contact-card:hover {
-  transform: translateY(-8px);
-}
-
-.contact-card .icon {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-.section {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-h2 {
-  color: #fff;
-}
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-.card-img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.card {
-  background: #2c3e508c;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  flex: 1 1 280px;
-}
-
-footer {
-  background: #2c3e50;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-}
-
-form input,
-form select,
-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #080808;
-}
-
-form button,
-.btn {
-  background: #e67e22;
-  color: #fff;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-/* 📱 Smartphones */
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
-  .grid {
-    flex-direction: column;
-  }
-
-  .card {
-    flex: 1 1 100%;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  form input,
-  form select,
-  form textarea {
-    font-size: 16px;
-  }
-}
-
-/* 💻 Tablettes */
-@media (min-width: 601px) and (max-width: 1024px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav a {
-    margin: 8px;
-  }
-
-  .grid {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .card {
-    flex: 1 1 45%;
-  }
-}
->>>>>>> 3c97e97706587e4a42afcb983405f35810f06622
