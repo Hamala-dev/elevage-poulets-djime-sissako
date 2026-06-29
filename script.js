@@ -36,7 +36,7 @@ function envoyerEmail() {
 
   const total = totalPanier();
 
-  emailjs.send("service_0znm6f9", "template_5zzn49o", {
+  emailjs.send("service_ggt3ksu", "template_5zzn49o", {
     panier: details,
     total: total,
     jour: jour,
@@ -55,15 +55,18 @@ function envoyerGoogleSheets() {
 
   const total = totalPanier();
 
-  fetch("TON_URL_GOOGLE_SHEETS", {
-    method: "POST",
-    body: JSON.stringify({
-      panier: details,
-      total: total,
-      jour: jour,
-      lieu: lieu,
-    }),
-  });
+  fetch(
+    "https://script.google.com/macros/s/AKfycbxiCVBzLAB6XT0gfGJlRZ5D5HUTuuAQTDGLKbcgA485DMDLbSf3Q9nV6A9qTyQ_tEV4/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+        panier: details,
+        total: total,
+        jour: jour,
+        lieu: lieu,
+      }),
+    },
+  );
 }
 
 // VALIDATION FINALE
