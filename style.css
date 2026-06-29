@@ -61,7 +61,7 @@ body::after {
 
 /* --- HEADER STICKY --- */
 .main-header {
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 1000;
   padding: 20px 0;
