@@ -5,6 +5,10 @@
     <title>Élevage et vente de poulets fermiers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+    <script>
+      emailjs.init("teChIOHv1oxxeJ3Qn");
+    </script>
   </head>
   <body>
     <header class="main-header">
@@ -82,29 +86,55 @@
       </div>
     </section>
     <section id="commande" class="section">
-      <h2>Formulaire de commande</h2>
+      <h2>Passer une commande</h2>
 
-      <form action="#" method="POST">
-        <input type="text" name="nom" placeholder="Votre nom" required />
-        <input type="tel" name="telephone" placeholder="Téléphone" required />
+      <!-- PRODUITS -->
+      <div class="produit">
+        <h3>Poulet Fermier</h3>
+        <p>Prix : 3500 FCFA</p>
+        <input type="number" id="qte-poulet" min="1" value="1" />
+        <button onclick="ajouterPanier('Poulet Fermier', 3500, 'qte-poulet')">
+          Ajouter au panier
+        </button>
+      </div>
 
-        <select name="produit" required>
-          <option value="">Choisir un produit</option>
-          <option value="poulet_cuire">Poulet prêt à cuire</option>
-          <option value="poulet_vivant">Poulet vivant</option>
-          <option value="oeufs">Œufs</option>
-        </select>
+      <div class="produit">
+        <h3>Poulet Découpé</h3>
+        <p>Prix : 4500 FCFA</p>
+        <input type="number" id="qte-decoupe" min="1" value="1" />
+        <button onclick="ajouterPanier('Poulet Découpé', 4500, 'qte-decoupe')">
+          Ajouter au panier
+        </button>
+      </div>
 
-        <input type="number" name="quantite" placeholder="Quantité" required />
+      <!-- PANIER -->
+      <h3>Votre panier</h3>
+      <ul id="panier"></ul>
 
-        <textarea
-          name="message"
-          placeholder="Message ou demande spéciale"
-        ></textarea>
+      <!-- RETRAIT -->
+      <h3>Choisir le jour de retrait</h3>
+      <select id="jour">
+        <option value="Vendredi - Retrait à la ferme">
+          Vendredi - Retrait à la ferme
+        </option>
+        <option value="Samedi - Marché">Samedi - Marché</option>
+        <option value="Dimanche - Retrait à la ferme">
+          Dimanche - Retrait à la ferme
+        </option>
+      </select>
 
-        <button type="submit">Envoyer la commande</button>
-      </form>
+      <h3>Choisir le lieu de retrait</h3>
+      <select id="lieu">
+        <option value="Ferme Djimé Sissako">Ferme Djimé Sissako</option>
+        <option value="Marché de Neuilly">Marché de Neuilly</option>
+      </select>
+
+      <!-- VALIDATION -->
+      <button onclick="validerCommande()">Valider la commande</button>
+
+      <div id="confirmation"></div>
     </section>
+
     <section class="section tarifs">
       <h2 class="title-center">Nos Tarifs</h2>
 
@@ -163,7 +193,8 @@
     </section>
 
     <footer>
-      <p>&copy; [Année] Élevage de poulets fermiers Chez Djimé Sissako</p>
+      <p>&copy; 2026 Élevage de poulets fermiers Chez Djimé Sissako</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

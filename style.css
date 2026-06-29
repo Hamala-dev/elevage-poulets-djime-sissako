@@ -18,7 +18,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("./assets/images/Copilot.png") center/cover no-repeat;
+  background: url("./assets/images/fond-screen.jpeg") center/cover no-repeat;
   opacity: 0.35;
   z-index: -2;
   animation: zoomPhoto 25s ease-in-out infinite;
@@ -80,7 +80,7 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("./assets/images/elevage.png") center/cover no-repeat;
+  background-color: rgba(11, 187, 49, 0.35);
   opacity: 0.35;
   z-index: -2;
   animation: zoomPhoto 25s ease-in-out infinite;
